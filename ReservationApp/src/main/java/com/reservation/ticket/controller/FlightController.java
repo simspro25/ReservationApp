@@ -37,14 +37,12 @@ public class FlightController {
 	}
 	
 	
-	
 	@RequestMapping("/showCompleteReservartion")
-	public String completeReservation(@RequestParam("flightId")Integer id,ModelMap modelMap) {
+	public String completeReservation(@RequestParam("flightId")Long id,ModelMap modelMap) {
 		Flight flight=repository.findById(id).get();
 		
 		modelMap.addAttribute("flight", flight);
 		return "complete-reservation";
 		
-	}
-	
+	}	
 }

@@ -10,7 +10,5 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
 	@Query("from User where email=:email")
 	User findByEmail(@Param("email")String email);
-
-	
 	
 }
